@@ -18,6 +18,8 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'ervandew/supertab'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on " Required for vundle
 
@@ -65,4 +67,8 @@ syntax on
 
 "enable backspace in insert mode
 set backspace=indent,eol,start
+
+
+"ToggleNerdTree hotkey
+map <F2> :NERDTreeToggle<CR>
 
