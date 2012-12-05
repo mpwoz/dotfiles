@@ -17,6 +17,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
@@ -72,3 +73,13 @@ set backspace=indent,eol,start
 "ToggleNerdTree hotkey
 map <F2> :NERDTreeToggle<CR>
 
+
+
+"Syntastic
+"if there are errors, mark them
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+
+"default syntax checkers
+let g:syntastic_javascript_checker="jshint"
