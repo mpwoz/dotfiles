@@ -29,7 +29,7 @@ filetype plugin indent on " Required for vundle
 colo wombat 
 
 "Tab width, newline tabs, replace with spaces
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
 
 "Turn off word wrapping
 set wrap!
