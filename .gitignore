@@ -1,6 +1,36 @@
-.vim/bundle
-.vim/colors
-Desktop
-Downloads
-Envs
+## Ignore everything...
+*
+## ...except dotfiles
+!.*
 
+## These are handled by vundle, no need to commit
+.vim/bundle
+
+## Ignored dotfiles
+.ICEauthority
+.bash_history
+.bash_logout
+.bash_profile
+.com.yoxos.update.fingerprint
+.dmrc
+.esd_auth
+.gitconfig
+.gksu.lock
+.gtk-bookmarks
+.irb-history
+.ivy2/
+.lesshst
+.profile
+.pulse-cookie
+.scala_history
+.sudo_as_admin_successful
+.vboxclient-display.pid
+.vboxclient-seamless.pid
+.vim-bak/
+.viminfo
+.vimrc-bak
+.xdvirc
+.xscreensaver-getimage.cache
+.xsession-errors
+.xsession-errors.old
+.yoxoslauncher/
