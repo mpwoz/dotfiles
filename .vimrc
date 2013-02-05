@@ -23,8 +23,15 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on " Required for vundle
+
+
+
+"Automatically run CoffeeMake on coffeescript files on save.
+"Show errors as well
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow
 
 
 "Color scheme
