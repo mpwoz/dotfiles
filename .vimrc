@@ -24,8 +24,13 @@ Bundle 'tpope/vim-surround'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'sukima/xmledit'
 
 filetype plugin indent on " Required for vundle
+
+filetype plugin on " Required for xmledit
+let xml_use_html=1 " Special html tag support
+
 
 
 
