@@ -87,6 +87,9 @@ set backspace=indent,eol,start
 "ToggleNerdTree hotkey
 map <F2> :NERDTreeToggle<CR>
 
+"NerdTree ignored files
+let NERDTreeIgnore = ['\.cmo$','\.cmi$','\.mli$','\.mll$','\.mly$','\.pyc$']
+
 
 "Highlight lines over 80 characters
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -99,5 +102,3 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 
-"default syntax checkers
-let g:syntastic_javascript_checker="jshint"
