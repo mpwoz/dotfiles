@@ -24,6 +24,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'slim-template/vim-slim'
 Bundle 'sukima/xmledit'
 
 filetype plugin indent on " Required for vundle
