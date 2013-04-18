@@ -25,6 +25,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'slim-template/vim-slim'
+Bundle 'tpope/vim-haml'
 Bundle 'sukima/xmledit'
 
 filetype plugin indent on " Required for vundle
@@ -64,6 +65,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+"Highlight search results, use :noh to clear
+set hlsearch
+
 "Enable indent folding
 "set foldenable
 "set fdm=indent
@@ -102,4 +106,9 @@ match OverLength /\%81v.\+/
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
+
+" Disable syntax checking for certain filetypes
+let g:syntastic_mode_map={'mode': 'active',
+                        \ 'active_filetypes': [],
+                        \ 'passive_filetypes': ['sass'] }
 
