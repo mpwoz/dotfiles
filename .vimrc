@@ -65,8 +65,10 @@ set incsearch
 set ignorecase
 set smartcase
 
-"Highlight search results, use :noh to clear
+"Highlight search results, use F3 to clear
 set hlsearch
+"nnoremap <F3> :set hlsearch!<CR> 
+nnoremap <F3> :noh<CR>
 
 "Enable indent folding
 "set foldenable
