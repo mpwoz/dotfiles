@@ -27,6 +27,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-haml'
 Bundle 'sukima/xmledit'
+Bundle 'vim-scripts/haskell.vim'
 
 filetype plugin indent on " Required for vundle
 
