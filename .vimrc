@@ -28,6 +28,8 @@ Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-haml'
 Bundle 'sukima/xmledit'
 Bundle 'vim-scripts/haskell.vim'
+Bundle 'jnwhiteh/vim-golang'
+
 
 filetype plugin indent on " Required for vundle
 
@@ -114,4 +116,5 @@ let g:syntastic_check_on_open=1
 let g:syntastic_mode_map={'mode': 'active',
                         \ 'active_filetypes': [],
                         \ 'passive_filetypes': ['sass'] }
+
 
