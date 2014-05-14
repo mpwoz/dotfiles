@@ -1,0 +1,29 @@
+To get monitor info: xrandr
+To get wacom name: xinput --list
+To get wacom info: xinput list-props <wacom name>
+See this site for more: http://forums.linuxmint.com/viewtopic.php?f=49&t=81085
+
+-----------------------------------------------
+
+Device 'Wacom Intuos3 9x12 stylus':
+	Wacom Tablet Area (271):	0, 0, 60960, 45720
+
+Wacom ratio: 60960 / 45720 = 4:3 = 16:12
+
+-----------------------------------------------
+
+Screen 0: 1920 x 1200
+
+Screen ratio: 16:10
+
+-----------------------------------------------
+
+Keep width, change height of input
+
+(10 / 12) * 45720 = 38100
+
+-----------------------------------------------
+
+So new tablet size should be:
+xsetwacom set 'Wacom Intuos3 9x12 stylus' area 0 0 60960 38100
+
