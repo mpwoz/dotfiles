@@ -1,7 +1,10 @@
 
 all: deploy
 
-deploy: deployVim
+deploy: deployVim deployXorg
+
+deployXorg:
+	cp xorg.conf /etc/X11/
 
 deployVim:
 	mv ~/.vim ~/.vim.bak
