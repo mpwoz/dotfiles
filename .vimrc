@@ -45,7 +45,8 @@ au BufWritePost *.coffee silent CoffeeMake! -b | cwindow
 
 
 "Color scheme
-colo wombat 
+set t_Co=256
+colo molokai 
 
 "Tab width, newline tabs, replace with spaces
 set tabstop=2 shiftwidth=2 expandtab

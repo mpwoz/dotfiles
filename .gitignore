@@ -16,7 +16,6 @@
 .local/*
 .mateconf/*
 .mozilla/*
-.profile
 .pulse-cookie
 .pulse/*
 .vboxclient-clipboard.pid
