@@ -75,6 +75,7 @@ filetype plugin indent on    " required
 "256 terminal colors
 set t_Co=256
 
+"Color scheme
 colo molokai
 
 set nobackup        "No backup or swap files all over the place

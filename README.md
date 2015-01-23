@@ -8,6 +8,8 @@ This will create backups of existing files.
 Running 'make revert' will undo deployment and restore your backups.
 
 
+xorg.conf goes in /etc/X11/ to enable QNIX monitor working with nvidia drivers properly
+
 #### Vim
 
 After deploying, run
