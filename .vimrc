@@ -39,6 +39,9 @@
 "Turn on syntax highlighting
 syntax on
 
+"Tags file when using ctags, CTRL + ] to jump to symbol def
+set tags=~/.tags
+
 """"""""""""""""""""""""""""
 """ Vundle Start
 """  download from github and put in .vim/bundle/Vundle.vim
