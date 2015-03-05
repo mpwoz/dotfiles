@@ -9,6 +9,9 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Set desktop background
+exec --no-startup-id feh --bg-scale ~/background
+
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
@@ -108,7 +111,7 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
 # No vertical borders (good with scrollbars)
-hide_edge_borders vertical
+#hide_edge_borders vertical
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
