@@ -35,6 +35,7 @@
   set textwidth=0           " Don't wrap words by default
   set virtualedit=block     " let blocks be in virutal edit mode
   set wildmenu              " This is used with wildmode(full) to cycle options
+  set encoding=utf-8        " Prevent weird characters
 
 "Turn on syntax highlighting
 syntax on
@@ -92,6 +93,8 @@ map <F2> :NERDTreeToggle<CR>
 "NerdTree ignored files
 let NERDTreeIgnore = ['\.cmo$','\.cmi$','\.mli$','\.mll$','\.mly$','\.pyc$']
 
+"NERDTree arrows are simple +/-, this prevents glitches with utf encoding
+let g:NERDTreeDirArrows=0
 
 "Turn on incremental search with ignore case (except explicit caps)
 set incsearch
