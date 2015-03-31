@@ -79,6 +79,9 @@ filetype plugin indent on    " required
 "256 terminal colors
 set t_Co=256
 
+"Fix background color when running in screen/tmux to use colorscheme not terminal bg
+set t_ut=
+
 "Color scheme
 colo molokai
 
