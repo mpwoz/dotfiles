@@ -68,6 +68,7 @@ Plugin 'kien/ctrlp.vim'            "Fuzzy file finder
 Plugin 'derekwyatt/vim-scala'      "Scala syntax highlighting
 Plugin 'godlygeek/tabular'         "Align things vertically in nice columns
 Plugin 'rking/ag.vim'              "Silver Searcher plugin
+Plugin 'digitaltoad/vim-jade'      "Jade templating syntax
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
