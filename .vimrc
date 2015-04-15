@@ -110,3 +110,5 @@ set smartcase
 set hlsearch
 nnoremap <F3> :noh<CR>
 
+"Filetype specific commands
+autocmd FileType java setlocal shiftwidth=4 tabstop=4 "Wide tabs for java
