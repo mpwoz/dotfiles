@@ -23,6 +23,19 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Autoswitch back to last ws if "switching" to currently selected one
+workspace_auto_back_and_forth yes
+
+# Make google hangouts windows float.
+# Make sure to set chrome://flags#enable-panels to true
+# Use xprop to figure these criteria out for other apps
+# See https://i3wm.org/docs/userguide.html#command_criteria for more info
+for_window [class="google-chrome*" instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating enable
+
+# Execute programs on startup
+exec "redshift-gtk -l manual"
+exec "chrome"
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -114,7 +127,8 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
 # No vertical borders (good with scrollbars)
-#hide_edge_borders vertical
+hide_edge_borders vertical
+# new_window pixel 1
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
