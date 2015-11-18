@@ -84,7 +84,11 @@ set t_Co=256
 "Fix background color when running in screen/tmux to use colorscheme not terminal bg
 set t_ut=
 
+" Disable bold font
+set t_md=
+
 "Color scheme
+set background=dark
 colo molokai
 
 set nobackup        "No backup or swap files all over the place

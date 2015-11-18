@@ -1,6 +1,9 @@
 " My vimrc for Windows, just to make gVim usable for simple text editing.
 " I don't do anything serious in Windows, but it would be nice to eventually combine this with my Linux .vimrc
 
+" TODO figure out how to source a common vimrc and have wrappers for different
+" environments. Or better yet, a single vimrc with conditional rules.
+
 " Set correct tempfile dir, otherwise errors writing swap on startup (windows gvim bug)
 set directory=.,$TEMP
 
