@@ -87,5 +87,5 @@ let g:NERDTreeDirArrows=0 "arrows are simple +/-, this prevents glitches with ut
 
 "Filetype specific commands
 autocmd FileType java setlocal shiftwidth=4 tabstop=4 "Wide tabs for java
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown "Markdown, not modula
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown wrap "Markdown, not modula
 
