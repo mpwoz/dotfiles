@@ -1,3 +1,38 @@
+[alias]
+  co = checkout
+  ci = commit
+  br = branch
+  st = status
+  lg = log --oneline --graph --decorate
+
+[color]
+  ui = true
+
+[core]
+  editor = vim
+
+[credential]
+  helper = "--cache timeout=10800" #3h
+
+[diff]
+  tool = vimdiff
+
+[log]
+  date = relative
+
+[push]
+  default = matching
+
+[web]
+  browser = google-chrome
+
+# Common URLs, allows e.g. `git clone gh:mpwoz/dotfiles`
+[url "https://github.com/"]
+  insteadOf = gh:
+
+[url "https://gist.github.com/"]
+  insteadOf = gist:
+
 [user]
-	name = Martin
-	email = wozniew1@illinois.edu
+  name = Martin Wozniewicz
+  email = martin.woz@gmail.com

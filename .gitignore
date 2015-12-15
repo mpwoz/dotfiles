@@ -1,26 +1,39 @@
-.mateconfd
-.ICEauthority
-.Xauthority
-.bash_logout
-.cache/ctrlp/mru/cache.txt
-.config/Trolltech.conf
-.config/*
-.dbus/session-bus/2186ba494c063de5369b637250d389ae-0
-.dmrc
-.gconf/apps/%gconf.xml
-.gconf/apps/nm-applet/%gconf.xml
-#	.gitignore
-.gnome2/Vim
-.gstreamer-0.10/registry.x86_64.bin
-.linuxmint/*
-.local/*
-.mateconf/*
-.mozilla/*
-.pulse-cookie
-.pulse/*
-.vboxclient-clipboard.pid
-.vboxclient-display.pid
-.vboxclient-seamless.pid
-.vim/bundle/*
-.viminfo
-.xsession-errors
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Temporary files #
+###################
+*.swp
+*.swo
+*~
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+.vim/bundle
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
