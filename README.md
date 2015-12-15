@@ -2,10 +2,8 @@
 
 ### Deployment
 
-Run 'make' to deploy dotfiles in home directory. 
-This will create backups of existing files.
-
-Running 'make revert' will undo deployment and restore your backups.
+Symlink files to homedir. Some common ones include .vim, .vimrc, .gitconfig,
+        .gitignore
 
 
 xorg.conf goes in /etc/X11/ to enable QNIX monitor working with nvidia drivers properly
