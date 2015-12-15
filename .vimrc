@@ -86,6 +86,7 @@ colo molokai
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.cmo$','\.cmi$','\.mli$','\.mll$','\.mly$','\.pyc$']
 let g:NERDTreeDirArrows=0 "arrows are simple +/-, this prevents glitches with utf encoding
+let NERDTreeShowHidden=1 "show hidden files
 
 "Filetype specific commands
 autocmd FileType java setlocal shiftwidth=4 tabstop=4 "Wide tabs for java
