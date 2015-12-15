@@ -43,6 +43,8 @@ set wildmenu              "This is used with wildmode(full) to cycle options
 set nowrap                "Don't wrap lines
 set nowritebackup
 
+autocmd BufNewFile,BufRead *.md setfiletype markdown
+
 "Turn on syntax highlighting
 syntax on
 
