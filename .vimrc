@@ -71,6 +71,7 @@ Plugin 'scrooloose/nerdtree'       "File tree browser plugin
 Plugin 'scrooloose/syntastic'      "Better syntax highlighting/checking
 Plugin 'tpope/vim-surround'        "HTML Tag completion
 Plugin 'vim-scripts/haskell.vim'   "Haskell syntax highlighting
+Plugin 'kana/vim-filetype-haskell' "Haskell
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
