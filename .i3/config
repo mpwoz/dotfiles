@@ -16,8 +16,10 @@ exec --no-startup-id feh --bg-scale ~/background
 bindsym Mod1+Mod4+l exec "gnome-screensaver-command --lock"
 
 ## Choose one as the main modifier key
-#set $mod Mod1 #Alt
-set $mod Mod4 #Win
+# Alt key
+# set $mod Mod1
+# Win key
+set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
