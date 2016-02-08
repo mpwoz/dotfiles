@@ -91,5 +91,5 @@ let NERDTreeShowHidden=1 "show hidden files
 
 "Filetype specific commands
 autocmd FileType java setlocal shiftwidth=4 tabstop=4 "Wide tabs for java
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown wrap "Markdown, not modula
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown wrap textwidth=0 "Markdown, not modula
 
