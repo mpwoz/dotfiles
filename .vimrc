@@ -93,3 +93,9 @@ let NERDTreeShowHidden=1 "show hidden files
 autocmd FileType java setlocal shiftwidth=4 tabstop=4 "Wide tabs for java
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown wrap textwidth=0 "Markdown, not modula
 
+"Use git to search for files when ctrl p is invoked (faster).
+"the --exclude-standard -co lets you open not-yet-checked-in files
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -co']
+"Don't limit number of files indexed
+let g:ctrlp_max_files=0
+
