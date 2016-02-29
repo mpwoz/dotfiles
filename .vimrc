@@ -59,11 +59,13 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'         "The vundle plugin manager
+Plugin 'dart-lang/dart-vim-plugin' "Dart
 Plugin 'derekwyatt/vim-scala'      "Scala syntax highlighting
 Plugin 'digitaltoad/vim-jade'      "Jade templating syntax
 Plugin 'ervandew/supertab'         "Tab completion of words
 Plugin 'flazz/vim-colorschemes'    "Lots of color schemes
 Plugin 'godlygeek/tabular'         "Align things vertically in nice columns
+Plugin 'kana/vim-filetype-haskell' "Haskell
 Plugin 'kien/ctrlp.vim'            "Fuzzy file finder
 Plugin 'rking/ag.vim'              "Silver Searcher plugin
 Plugin 'scrooloose/nerdcommenter'  "Easy commenting/uncommenting
@@ -71,7 +73,6 @@ Plugin 'scrooloose/nerdtree'       "File tree browser plugin
 Plugin 'scrooloose/syntastic'      "Better syntax highlighting/checking
 Plugin 'tpope/vim-surround'        "HTML Tag completion
 Plugin 'vim-scripts/haskell.vim'   "Haskell syntax highlighting
-Plugin 'kana/vim-filetype-haskell' "Haskell
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
