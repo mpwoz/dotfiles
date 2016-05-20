@@ -34,14 +34,14 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
+     syntax-checking
      ;; version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(dart-mode simpleclip)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -246,6 +246,13 @@ in `dotspacemacs/user-config'."
   ;; Set chrome as default link-opener
   (setq browse-url-browser-function 'browse-url-generic
         browse-url-generic-program "google-chrome")
+
+  ;; Follow symlinks to version-controlled files without asking for confirmation.
+  (setq vc-follow-symlinks t)
+
+  ;; Clipboard integration
+  (simpleclip-mode 1)
+
   )
 
 (defun dotspacemacs/user-config ()
@@ -258,8 +265,24 @@ layers configuration. You are free to put any user code."
   (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
   ;; Don't add a timestamp when marking items as done
   (setq org-log-done nil)
+  (setq org-agenda-files ("~/org/journal.org"))
+  (setq dart-enable-analysis-server t)
+  (add-hook 'dart-mode-hook 'flycheck-mode)
   )
 
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files (quote ("~/org/journal.org"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
