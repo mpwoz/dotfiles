@@ -1,5 +1,9 @@
 export TERM=xterm-256color
 
+alias e="emacsclient -t -a ''"
+alias emacs="e"
+alias vim="e"
+
 alias po="sudo poweroff"
 
 # some more ls aliases
