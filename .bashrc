@@ -1,26 +1,28 @@
 export TERM=xterm-256color
 
+# Power management
+alias po="sudo poweroff"
+
+# Use emacs
 alias e="emacsclient -t -a ''"
 alias emacs="e"
 alias vim="e"
 
-alias po="sudo poweroff"
+# Editing dotfiles and automatically sourcing them
+alias s='source ~/.bashrc'
+alias vs='vi ~/src/dotfiles/.bashrc && s'
 
-# some more ls aliases
+# ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-alias s='source ~/.bashrc'
-alias vs='vim ~/.bashrc && s'
-
-alias vim='emacs'
 
 #Turn off screensaver/power save
 xset s off
 xset -dpms
 
-# avoid duplicates
+# bash history
+# avoid duplicates in history
 export HISTCONTROL=ignoredups:erasedups
 # append history entries
 shopt -s histappend
