@@ -2,9 +2,19 @@ export TERM=xterm-256color
 
 alias po="sudo poweroff"
 
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias s='source ~/.bashrc'
+alias vs='vim ~/.bashrc && s'
+
+alias vim='emacs'
+
 #Turn off screensaver/power save
-#xset s off
-#xset -dpms
+xset s off
+xset -dpms
 
 # avoid duplicates
 export HISTCONTROL=ignoredups:erasedups

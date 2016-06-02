@@ -265,7 +265,6 @@ layers configuration. You are free to put any user code."
   (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
   ;; Don't add a timestamp when marking items as done
   (setq org-log-done nil)
-  (setq org-agenda-files ("~/org/journal.org"))
   (setq dart-enable-analysis-server t)
   (add-hook 'dart-mode-hook 'flycheck-mode)
   )
