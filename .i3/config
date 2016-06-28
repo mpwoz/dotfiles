@@ -42,6 +42,9 @@ for_window [class="google-chrome*" instance="crx_nckgahadagoaajjgafhacjanaoiihap
 exec "redshift-gtk -l manual"
 exec "chrome"
 
+# Keybindings for launching apps
+bindsym $mod+c exec google-chrome
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
