@@ -3,6 +3,11 @@ export TERM=xterm-256color
 # Power management
 alias po="sudo poweroff"
 
+# Popup notification when a long process finishes.
+# Usage: 
+#    <long-running-process> && n
+alias n="notify-send \"Job finished.\""
+
 # Use emacs
 alias e="emacsclient -t -a ''"
 alias emacs="e"
