@@ -2,6 +2,9 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+;; Notes
+;; <SPC h SPC> : help! search documentation and layers.
+
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -27,7 +30,9 @@ values."
      ;; better-defaults
      emacs-lisp
      common-lisp
+     (colors :variables colors-enable-nyan-cat-progress-bar t) ;; Only in GUI
      ;; git
+     html
      markdown
      org
      ;; (shell :variables
@@ -36,12 +41,21 @@ values."
      ;; spell-checking
      syntax-checking
      ;; version-control
+
+     ;; Favorite languages
+     javascript
+     python
+     shell-scripts
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(dart-mode simpleclip)
+   dotspacemacs-additional-packages
+   '(
+     dart-mode
+     simpleclip
+     )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -83,7 +97,7 @@ values."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner nil
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'.
    ;; (default '(recents projects))
@@ -203,11 +217,11 @@ values."
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters the
    ;; point when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
+   ;; dotspacemacs-smooth-scrolling t
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -241,17 +255,12 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
-  ;; Auto spell correct, TODO make it easier to see suggestions
-  ;; (define-key evil-normal-state-map "s" 'flyspell-auto-correct-word)
   ;; Set chrome as default link-opener
   (setq browse-url-browser-function 'browse-url-generic
         browse-url-generic-program "google-chrome")
 
   ;; Follow symlinks to version-controlled files without asking for confirmation.
   (setq vc-follow-symlinks t)
-
-  ;; Clipboard integration
-  (simpleclip-mode 1)
 
   )
 
@@ -267,6 +276,26 @@ layers configuration. You are free to put any user code."
   (setq org-log-done nil)
   (setq dart-enable-analysis-server t)
   (add-hook 'dart-mode-hook 'flycheck-mode)
+
+  ;; Clipboard integration
+  (simpleclip-mode 1)
+
+  ;; vimrc syntax highlighting in emacs :-0
+  ;; Source: http://stackoverflow.com/a/4238738
+  (define-generic-mode 'vimrc-generic-mode
+    '() ;; TODO add comment syntax highlight
+    '() ;; TODO add keywords to highlight
+    '(("^[\t ]*:?\\(!\\|ab\\|map\\|unmap\\)[^\r\n\"]*\"[^\r\n\"]*\\(\"[^\r\n\"]*\"[^\r\n\"]*\\)*$"
+       (0 font-lock-warning-face))
+      ("\\(^\\|[\t ]\\)\\(\".*\\)$"
+       (2 font-lock-comment-face))
+      ("\"\\([^\n\r\"\\]\\|\\.\\)*\""
+       (0 font-lock-string-face)))
+    '("/vimrc\\'" "\\.vim\\(rc\\)?\\'")
+    '((lambda ()
+        (modify-syntax-entry ?\" ".")))
+    "Generic mode for Vim configuration files.")
+
   )
 
 
