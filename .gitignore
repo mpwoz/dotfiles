@@ -24,6 +24,7 @@
 *.tar
 *.zip
 .vim/bundle
+.vim/plugged
 
 # Logs and databases #
 ######################
