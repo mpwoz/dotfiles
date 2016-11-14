@@ -47,44 +47,30 @@ autocmd BufNewFile,BufRead *.md setfiletype markdown
 
 "Turn on syntax highlighting
 syntax on
+filetype plugin indent on
 
-""""""""""""""""""""""""""""
-""" Vundle Start
-""""""""""""""""""""""""""""
-filetype off
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'        "HTML Tag completion
 
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'dart-lang/dart-vim-plugin' "Dart
+Plug 'flazz/vim-colorschemes'    "Lots of color schemes
+Plug 'godlygeek/tabular'         "Align things vertically in nice columns
+Plug 'kien/ctrlp.vim'            "Fuzzy file finder
+Plug 'rking/ag.vim'              "Silver Searcher plugin
+Plug 'scrooloose/nerdcommenter'  "Easy commenting/uncommenting
+Plug 'scrooloose/nerdtree'       "File tree browser plugin
+Plug 'scrooloose/syntastic'      "Better syntax highlighting/checking
+Plug 'tpope/vim-surround'        "HTML Tag completion
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'         "The vundle plugin manager
-Plugin 'Valloric/YouCompleteMe'    "YCM
-Plugin 'dart-lang/dart-vim-plugin' "Dart
-Plugin 'derekwyatt/vim-scala'      "Scala syntax highlighting
-Plugin 'digitaltoad/vim-jade'      "Jade templating syntax
-Plugin 'ervandew/supertab'         "Tab completion of words
-Plugin 'flazz/vim-colorschemes'    "Lots of color schemes
-Plugin 'godlygeek/tabular'         "Align things vertically in nice columns
-Plugin 'kana/vim-filetype-haskell' "Haskell
-Plugin 'kien/ctrlp.vim'            "Fuzzy file finder
-Plugin 'rking/ag.vim'              "Silver Searcher plugin
-Plugin 'scrooloose/nerdcommenter'  "Easy commenting/uncommenting
-Plugin 'scrooloose/nerdtree'       "File tree browser plugin
-Plugin 'scrooloose/syntastic'      "Better syntax highlighting/checking
-Plugin 'tpope/vim-surround'        "HTML Tag completion
-Plugin 'vim-scripts/haskell.vim'   "Haskell syntax highlighting
+Plug 'SirVer/ultisnips' | Plug 'natebosch/dartlang-snippets'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-""""""""""""""""""""""""""""
-""" Vundle end
-""""""""""""""""""""""""""""
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+call plug#end()
 
 "Color scheme
 colo molokai
-
 
 """"""""""""""""""""""""""""
 """ YouCompleteMe Start
@@ -99,8 +85,8 @@ let g:ycm_echo_current_diagnostic = 1
 hi SpellBad term=none ctermbg=none cterm=undercurl ctermfg=Red gui=undercurl guisp=Red
 hi SpellCap term=none ctermbg=none cterm=undercurl ctermfg=Magenta gui=undercurl guisp=Magenta
 
-" Use C-] to jump to definition"
-nmap <C-]> :YcmCompleter GoToDefinition<CR>
+" Use C-b to jump to definition"
+nmap <C-b> :YcmCompleter GoToDefinition<CR>
 """"""""""""""""""""""""""""
 """ YouCompleteMe End
 """"""""""""""""""""""""""""
