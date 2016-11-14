@@ -51,7 +51,8 @@ call plug#end()
 
 "Colors
 syntax on
-colo molokai
+colo bubblegum-256-dark
+let g:airline_theme='bubblegum'
 
 """"""""""""""""""""""""""""
 """ YouCompleteMe Start
