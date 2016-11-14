@@ -92,6 +92,14 @@ let g:ctrlp_max_files=0
 " Markdown syntax for .md files
 autocmd BufNewFile,BufRead *.md setfiletype markdown
 
+" Git shortcuts
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>ga :Gcommit -a<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gl :Commits<cr>
+nnoremap <leader>gp :MagitOnly<cr>
+
 set autoindent            "always set autoindenting on
 set backspace=2           "allow backspacing over everything in insert mode
 set nobackup              "Don't keep a backup file
