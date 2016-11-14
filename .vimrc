@@ -126,7 +126,7 @@ set softtabstop=2         "Why are tabs so big?  This fixes it
 set noswapfile
 set textwidth=0           "Don't wrap words by default
 set notimeout             "i like to be pokey
-set t_Co=256              "256 terminal colors 
+set t_Co=256              "256 terminal colors
 set t_md=                 "Disable bold font
 set t_ut=                 "Fix background when in screen/tmux
 set ttimeout              "timeout on key-codes
