@@ -32,16 +32,18 @@ Plug 'kien/ctrlp.vim'            "Fuzzy file finder
 Plug 'rking/ag.vim'              "Silver Searcher plugin
 Plug 'scrooloose/nerdcommenter'  "Easy commenting/uncommenting
 Plug 'scrooloose/nerdtree'       "File tree browser plugin
-Plug 'scrooloose/syntastic'      "Better syntax highlighting/checking
 Plug 'tpope/vim-surround'        "HTML Tag completion
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes' "Powerline with color schemes
+Plug 'schickling/vim-bufonly'
 
 " Languages and completion
 Plug 'SirVer/ultisnips' | Plug 'natebosch/dartlang-snippets' "Snippets for dart/ng2
 Plug 'dart-lang/dart-vim-plugin' "Dart
-Plug 'Valloric/YouCompleteMe', { 'frozen': 1, 'do': function('BuildYCM') }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+"Version is frozen because it's a tar with working error highlights.
+Plug 'Valloric/YouCompleteMe', { 'frozen': 1, 'do': function('BuildYCM') }
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -54,24 +56,53 @@ syntax on
 colo bubblegum-256-dark
 let g:airline_theme='bubblegum'
 
+"Make <SPACE> the leader key.
+let g:mapleader=" "
+
 """"""""""""""""""""""""""""
 """ YouCompleteMe Start
 """"""""""""""""""""""""""""
 " Turn off Syntastic gutter markers"
+"let g:ycm_show_diagnostics_ui = 1
+"let g:ycm_enable_diagnostic_signs = 0
+"let g:ycm_enable_diagnostic_highlighting = 1
+"let g:ycm_echo_current_diagnostic = 1
+
+" Highlight errors and warnings with red/magenta undercurl"
+"hi SpellBad term=none ctermbg=none cterm=undercurl ctermfg=Red gui=undercurl guisp=Red
+"hi SpellCap term=none ctermbg=none cterm=undercurl ctermfg=Magenta gui=undercurl guisp=Magenta
+
+
+" Use C-b to jump to definition"
+nmap <C-b> :YcmCompleter GoToDefinition<CR>
 let g:ycm_show_diagnostics_ui = 1
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 1
 let g:ycm_echo_current_diagnostic = 1
-
-" Highlight errors and warnings with red/magenta undercurl"
-hi SpellBad term=none ctermbg=none cterm=undercurl ctermfg=Red gui=undercurl guisp=Red
-hi SpellCap term=none ctermbg=none cterm=undercurl ctermfg=Magenta gui=undercurl guisp=Magenta
-
-" Use C-b to jump to definition"
-nmap <C-b> :YcmCompleter GoToDefinition<CR>
+let g:ycm_always_populate_location_list = 1
+" Aggressive completion
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_complete_in_comments_and_strings = 1
+let g:ycm_filetype_blacklist = {}
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 """"""""""""""""""""""""""""
 """ YouCompleteMe End
 """"""""""""""""""""""""""""
+
+" FZF
+let g:fzf_commits_log_options = '--graph --color=always '
+      \.'--pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) '
+      \.'%C(bold blue)<%an>%Creset"'
+let g:fzf_buffers_jump = 1
+
+" Ultisnips
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"" Don't let YCM steal <tab> from ultisnips
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 """ NERDTree settings
 map <F2> :NERDTreeToggle<CR>
@@ -100,8 +131,20 @@ nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gl :Commits<cr>
 nnoremap <leader>gp :MagitOnly<cr>
 
+" faster window switching
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Use <C-n> to clear the highlighting of :set hlsearch.
+if maparg('<C-n>', 'n') ==# ''
+  nnoremap <silent> <C-n> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-n>
+endif
+
 set autoindent            "always set autoindenting on
 set backspace=2           "allow backspacing over everything in insert mode
+set backupcopy=yes        "Write directly to file instead of overwriting the whole file.
 set nobackup              "Don't keep a backup file
 set cindent               "c code indenting
 set nocompatible          "Use Vim defaults (much better!)
@@ -144,6 +187,13 @@ set virtualedit=block     "let blocks be in virutal edit mode
 set wildmenu              "This is used with wildmode(full) to cycle options
 set nowrap                "Don't wrap lines
 set nowritebackup
+
+"""""""""""""""""""""""""""""""""""""
+""" Local customizations
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+"""""""""""""""""""""""""""""""""""""
 
 " This goes last
 filetype plugin indent on
