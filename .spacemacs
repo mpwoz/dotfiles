@@ -275,6 +275,7 @@ layers configuration. You are free to put any user code."
   ;; Don't add a timestamp when marking items as done
   (setq org-log-done nil)
   (setq dart-enable-analysis-server t)
+  (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
   (add-hook 'dart-mode-hook 'flycheck-mode)
 
   ;; Clipboard integration
