@@ -25,6 +25,7 @@
 *.zip
 .vim/bundle
 .vim/plugged
+.vim/.netrwhist
 
 # Logs and databases #
 ######################
