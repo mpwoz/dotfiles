@@ -35,6 +35,7 @@ Plug 'scrooloose/nerdtree'       "File tree browser plugin
 Plug 'tpope/vim-surround'        "HTML Tag completion
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes' "Powerline with color schemes
 Plug 'schickling/vim-bufonly'
+Plug 'vimwiki/vimwiki'
 
 " Languages and completion
 Plug 'SirVer/ultisnips' | Plug 'natebosch/dartlang-snippets' "Snippets for dart/ng2
