@@ -1,19 +1,12 @@
-## Collection of my .files
+## Collection of .files
 
-### Deployment
+### Installation (warning: installs chrome, git, and a bunch of other stuff)
 
-Symlink files to homedir. Some common ones include .vim, .vimrc, .gitconfig,
-        .gitignore
-
-
-xorg.conf goes in /etc/X11/ to enable QNIX monitor working with nvidia drivers properly
+    wget -P ~/tmp/ https://raw.githubusercontent.com/mpwoz/dotfiles/master/setup.sh \
+      && sudo ~/src/dotfiles/setup.sh
 
 #### Vim
+After deploying, run `:PlugInstall` inside vim to install bundles. 
 
-After deploying, run
-    :BundleInstall
-inside vim to install bundles. 
-
-enable html tag-completion by doing 
-    cp .vim/bundle/xmledit/ftplugin/xml.vim html.vim
-
+#### Misc
+xorg.conf goes in /etc/X11/ to enable QNIX monitor working with nvidia drivers properly
