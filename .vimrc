@@ -25,7 +25,6 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'flazz/vim-colorschemes'    "Lots of color schemes
 Plug 'tpope/vim-sensible'        "Sensible default settings
 Plug 'wellle/targets.vim'        "Additional text objects
-Plug 'bkad/CamelCaseMotion'      "text objects inside camelCase words
 
 " Editor Tools
 Plug 'godlygeek/tabular'         "Align things vertically in nice columns
@@ -55,16 +54,6 @@ call plug#end()
 
 "Make <SPACE> the leader key.
 let g:mapleader=" "
-
-"Set up camelCase word motion
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
 
 "Colors
 syntax on
