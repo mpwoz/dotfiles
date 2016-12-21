@@ -87,14 +87,6 @@ let g:fzf_commits_log_options = '--graph --color=always '
       \.'%C(bold blue)<%an>%Creset"'
 let g:fzf_buffers_jump = 1
 
-"" Ultisnips
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"" Don't let YCM steal <tab> from ultisnips
-"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-
 """ NERDTree settings
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.cmo$','\.cmi$','\.mli$','\.mll$','\.mly$','\.pyc$']
@@ -127,6 +119,15 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+"Easily alias any command
+fun! SetupCommandAlias(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+call SetupCommandAlias("W","w")
+call SetupCommandAlias("df","DartFmt")
 
 " Use <C-n> to clear the highlighting of :set hlsearch.
 "if maparg('<C-n>', 'n') ==# ''
