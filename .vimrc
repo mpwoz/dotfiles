@@ -25,6 +25,7 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'flazz/vim-colorschemes'    "Lots of color schemes
 Plug 'tpope/vim-sensible'        "Sensible default settings
 Plug 'wellle/targets.vim'        "Additional text objects
+Plug 'ntpeters/vim-better-whitespace'
 
 " Editor Tools
 Plug 'godlygeek/tabular'         "Align things vertically in nice columns
