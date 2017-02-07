@@ -130,6 +130,9 @@ endfun
 call SetupCommandAlias("W","w")
 call SetupCommandAlias("df","DartFmt")
 
+"Strip whitespace on save for all files
+autocmd BufEnter * ToggleStripWhitespaceOnSave
+
 " Use <C-n> to clear the highlighting of :set hlsearch.
 "if maparg('<C-n>', 'n') ==# ''
 "  nnoremap <silent> <C-n> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-n>
