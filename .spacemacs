@@ -30,7 +30,7 @@ values."
      ;; better-defaults
      emacs-lisp
      common-lisp
-     (colors :variables colors-enable-nyan-cat-progress-bar t) ;; Only in GUI
+     ;;(colors :variables colors-enable-nyan-cat-progress-bar t) ;; Only in GUI
      ;; git
      html
      markdown
@@ -38,7 +38,7 @@ values."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
+     spell-checking
      syntax-checking
      ;; version-control
 
@@ -122,10 +122,10 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 9
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 0.9)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -269,6 +269,10 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
 
+  (define-key global-map (kbd "C-+") 'text-scale-increase)
+  (define-key global-map (kbd "C--") 'text-scale-decrease)
+
+
   ;;;;org-mode configuration
   ;; Make org-mode default for opening files that end in .org"
   (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
@@ -281,7 +285,7 @@ layers configuration. You are free to put any user code."
   ;; Clipboard integration
   (simpleclip-mode 1)
 
-  ;; vimrc syntax highlighting in emacs :-0
+  ;; vimrc syntax highlighting in emacs
   ;; Source: http://stackoverflow.com/a/4238738
   (define-generic-mode 'vimrc-generic-mode
     '() ;; TODO add comment syntax highlight
@@ -296,7 +300,6 @@ layers configuration. You are free to put any user code."
     '((lambda ()
         (modify-syntax-entry ?\" ".")))
     "Generic mode for Vim configuration files.")
-
   )
 
 
