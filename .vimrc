@@ -86,7 +86,13 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:fzf_commits_log_options = '--graph --color=always '
       \.'--pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) '
       \.'%C(bold blue)<%an>%Creset"'
-let g:fzf_buffers_jump = 1
+let g:fzf_buffers_jump = 1 " jump to an open window if buffer already open
+"
+" FZF aliases for navigating buffers and files.
+nnoremap <leader>lf :Files<cr>
+nnoremap <leader>lr :History<cr>
+nnoremap <leader>lb :Buffers<cr>
+nnoremap <leader>ll :Lines<cr>
 
 """ NERDTree settings
 map <F2> :NERDTreeToggle<CR>
@@ -100,9 +106,9 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown wrap textwidth=0 "Mark
 
 "Use git to search for files when ctrl p is invoked (faster).
 "the --exclude-standard -co lets you open not-yet-checked-in files
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -co']
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -co']
 "Don't limit number of files indexed
-let g:ctrlp_max_files=0
+"let g:ctrlp_max_files=0
 
 " Markdown syntax for .md files
 autocmd BufNewFile,BufRead *.md setfiletype markdown
@@ -120,6 +126,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
 
 "Easily alias any command
 fun! SetupCommandAlias(from, to)
