@@ -37,6 +37,8 @@ Plug 'tpope/vim-surround'        "HTML Tag completion
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes' "Powerline with color schemes
 Plug 'schickling/vim-bufonly'
 Plug 'vimwiki/vimwiki'
+Plug 'vim-latex/vim-latex'
+Plug 'xuhdev/vim-latex-live-preview'
 
 " Languages and completion
 Plug 'SirVer/ultisnips' | Plug 'natebosch/dartlang-snippets' "Snippets for dart/ng2
