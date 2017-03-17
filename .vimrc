@@ -45,6 +45,7 @@ Plug 'SirVer/ultisnips' | Plug 'natebosch/dartlang-snippets' "Snippets for dart/
 Plug 'dart-lang/dart-vim-plugin' "Dart
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'lepture/vim-velocity'
 
 " Git
 Plug 'airblade/vim-gitgutter'
