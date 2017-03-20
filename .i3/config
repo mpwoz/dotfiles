@@ -42,8 +42,10 @@ workspace_auto_back_and_forth yes
 exec "redshift-gtk -l manual"
 exec "chrome"
 
-# Keybindings for launching apps
+# Keybindings for launching apps/commands
 bindsym $mod+c exec google-chrome
+bindsym $mod+Print exec scrot -e 'mv $f /tmp/ && xclip -selection clipboard -t image/png -i /tmp/$f'
+bindsym --release Print exec scrot -s -e 'mv $f /tmp/ && xclip -selection clipboard -t image/png -i /tmp/$f'
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
