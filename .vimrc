@@ -70,6 +70,9 @@ match ErrorMsg '\%>80v.\+'
 
 " Use C-b to jump to definition"
 nmap <C-b> :YcmCompleter GoToDefinition<CR>
+" alias tag declaration jump to use ycm
+nmap <C-]> <C-b>
+
 let g:ycm_show_diagnostics_ui = 1
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 1
