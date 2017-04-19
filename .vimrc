@@ -150,6 +150,10 @@ autocmd BufEnter * ToggleStripWhitespaceOnSave
 "if maparg('<C-n>', 'n') ==# ''
 "  nnoremap <silent> <C-n> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-n>
 "endif
+ 
+" Intuitive vertical movement within wrapped lines.
+map j gj
+map k gk
 
 set autoindent            "always set autoindenting on
 set backspace=2           "allow backspacing over everything in insert mode
@@ -203,6 +207,18 @@ if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 """""""""""""""""""""""""""""""""""""
+ 
+" No bells!
+autocmd! GUIEnter * set vb t_vb=
+set noerrorbells 
+set novisualbell
+set t_vb=
+
 
 " This goes last
 filetype plugin indent on
+
+
+
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+
