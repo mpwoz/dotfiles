@@ -17,6 +17,7 @@ git config --global merge.tool "vimdiff"
 git config --global color.ui true
 git config --global credential.helper "cache --timeout=10000"
 git config --global push.default simple
+git config --global core.excludesfile ~/.gitignore_global
 
 # Git aliases
 git config --global alias.co checkout
@@ -44,6 +45,7 @@ ln -s ~/src/dotfiles/.bashrc ~/.bashrc
 ln -s ~/src/dotfiles/.zshrc ~/.zshrc
 ln -s ~/src/dotfiles/.profile ~/.profile
 ln -s ~/src/dotfiles/.i3 ~/.i3
+ln -s ~/src/dotfiles/gitignore_global ~/.gitignore_global
 
 # Install cron jobs
 ~/src/dotfiles/cron/setup.sh
