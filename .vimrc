@@ -52,7 +52,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 "Version is frozen because it's a tar with working error highlights.
-Plug 'Valloric/YouCompleteMe', { 'frozen': 1, 'do': function('BuildYCM') }
+"Plug 'Valloric/YouCompleteMe', { 'frozen': 1, 'do': function('BuildYCM') }
 
 call plug#end()
 
