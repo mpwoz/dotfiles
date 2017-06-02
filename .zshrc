@@ -88,3 +88,4 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zshrc-local
 
+source ~/.aliases
