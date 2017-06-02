@@ -1,0 +1,15 @@
+# Editing dotfiles and automatically sourcing them
+alias s='source ~/.zshrc;'
+alias vs='vim -O ~/.zshrc-local ~/src/dotfiles/.zshrc && s'
+alias va='vim ~/.aliases && s'
+alias vimcfg='vim ~/src/dotfiles/.vimrc'
+
+# ls aliases
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias sl=ls
+
+# ag smart case search
+alias ag='ag -S'

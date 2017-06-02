@@ -37,13 +37,15 @@ wget -P ~/tmp/ https://dl.google.com/linux/direct/google-chrome-stable_current_a
 dpkg -i ~/tmp/google-chrome-stable_current_amd64.deb
 apt-get -y -f install
 
-# Set up dotfiles to configure programs
-git clone https://github.com/mpwoz/dotfiles.git ~/src/dotfiles
+# TODO separate mac- and linux- specific configs
+# Set up dotfile links
 ln -s ~/src/dotfiles/.vimrc ~/.vimrc
 ln -s ~/src/dotfiles/.vim ~/.vim
+ln -s ~/src/dotfiles/.profile ~/.profile
 ln -s ~/src/dotfiles/.bashrc ~/.bashrc
 ln -s ~/src/dotfiles/.zshrc ~/.zshrc
-ln -s ~/src/dotfiles/.profile ~/.profile
+ln -s ~/src/dotfiles/.aliases ~/.aliases
+touch ~/.zshrc-local
 ln -s ~/src/dotfiles/.i3 ~/.i3
 ln -s ~/src/dotfiles/gitignore_global ~/.gitignore_global
 

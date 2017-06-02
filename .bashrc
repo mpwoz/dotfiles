@@ -15,22 +15,6 @@ alias n="notify-send \"Job finished.\""
 alias emacs="emacs -nw"
 alias e="emacs"
 
-# Editing dotfiles and automatically sourcing them
-alias s='source ~/.bashrc; source ~/.bash_aliases'
-alias vs='vim -O ~/.bashrc ~/src/dotfiles/.bashrc && s'
-alias va='vim ~/.bash_aliases && s'
-alias vimcfg='vim ~/src/dotfiles/.vimrc'
-
-# ls aliases
-alias ls='ls --color=auto'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias sl=ls
-
-# ag smart case search
-alias ag='ag -S'
-
 #Turn off screensaver/power save
 xset s off
 xset -dpms
@@ -54,3 +38,5 @@ alias pngclip="xclip -selection clipboard -t image/png -i" # Usage: pngclip [fil
 
 # Copy current dir to clipboard
 alias pwdclip="pwd | xclip -selection clipboard"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
