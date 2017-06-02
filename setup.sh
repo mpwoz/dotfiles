@@ -9,6 +9,8 @@ apt-get -y dist-upgrade
 # Some basic tools to get started
 apt-get -y install vim-gtk build-essential
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Install and setup Git
 apt-get -y install git
 git config --global user.name "Martin Wozniewicz"
