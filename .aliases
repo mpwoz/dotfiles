@@ -12,5 +12,12 @@ alias la='ls -A'
 alias l='ls -CF'
 alias sl=ls
 
+# Git shortcuts
+alias g='git'
+alias gs='git st'
+alias gl='git lg'
+alias gci='git ci -m'
+alias gd='git diff'
+
 # ag smart case search
 alias ag='ag -S'
