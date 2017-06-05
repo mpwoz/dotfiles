@@ -1,3 +1,5 @@
+alias a='alias'
+
 # Editing dotfiles and automatically sourcing them
 alias s='source ~/.zshrc;'
 alias vs='vim -O ~/.zshrc-local ~/src/dotfiles/.zshrc && s'
