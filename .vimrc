@@ -47,6 +47,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lepture/vim-velocity'
 
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -150,7 +154,7 @@ autocmd BufEnter * ToggleStripWhitespaceOnSave
 "if maparg('<C-n>', 'n') ==# ''
 "  nnoremap <silent> <C-n> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-n>
 "endif
- 
+
 " Intuitive vertical movement within wrapped lines.
 map j gj
 map k gk
@@ -207,10 +211,10 @@ if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 """""""""""""""""""""""""""""""""""""
- 
+
 " No bells!
 autocmd! GUIEnter * set vb t_vb=
-set noerrorbells 
+set noerrorbells
 set novisualbell
 set t_vb=
 
