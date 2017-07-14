@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+source $(brew --prefix nvm)/nvm.sh
+
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/mwwoznie/.oh-my-zsh
@@ -51,7 +54,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z globalias tmux)
+plugins=(git z globalias tmux rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
