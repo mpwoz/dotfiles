@@ -46,6 +46,7 @@ Plug 'dart-lang/dart-vim-plugin' "Dart
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lepture/vim-velocity'
+Plug 'chikamichi/mediawiki.vim'
 
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'mxw/vim-jsx'
