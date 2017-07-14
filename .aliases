@@ -5,6 +5,7 @@ alias s='source ~/.zshrc;'
 alias vs='vim -O ~/.zshrc-local ~/src/dotfiles/.zshrc && s'
 alias va='vim ~/.aliases && s'
 alias vimcfg='vim ~/src/dotfiles/.vimrc'
+alias e='emacs'
 
 # ls aliases
 #alias ls='ls --color=auto'
@@ -19,6 +20,7 @@ alias g='git'
 alias gs='git st'
 alias gl='git lg'
 alias gci='git ci -m'
+alias gca='git ci --amend'
 alias gd='git diff'
 
 
@@ -28,3 +30,5 @@ alias ag='ag -S'
 # Don't accidentally push things (this is in zsh git plugin)
 unalias gp
 
+
+alias rbenv='RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" rbenv install --verbose'
