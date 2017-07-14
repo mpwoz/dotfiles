@@ -30,5 +30,6 @@ alias ag='ag -S'
 # Don't accidentally push things (this is in zsh git plugin)
 unalias gp
 
-
-alias rbenv='RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" rbenv install --verbose'
+# Fix for rbenv install not showing output
+# https://github.com/rbenv/ruby-build/issues/1064
+alias rbi='RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" rbenv install --verbose'
