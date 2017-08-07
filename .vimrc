@@ -38,10 +38,8 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes' "Powerlin
 Plug 'schickling/vim-bufonly'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-latex/vim-latex'
-Plug 'xuhdev/vim-latex-live-preview'
 
 " Languages and completion
-Plug 'SirVer/ultisnips' | Plug 'natebosch/dartlang-snippets' "Snippets for dart/ng2
 Plug 'dart-lang/dart-vim-plugin' "Dart
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -51,6 +49,7 @@ Plug 'chikamichi/mediawiki.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-rails'
 
 " Git
 Plug 'airblade/vim-gitgutter'
