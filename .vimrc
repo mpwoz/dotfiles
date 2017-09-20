@@ -29,27 +29,26 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " Editor Tools
 Plug 'godlygeek/tabular'         "Align things vertically in nice columns
-Plug 'kien/ctrlp.vim'            "Fuzzy file finder
-Plug 'rking/ag.vim'              "Silver Searcher plugin
 Plug 'scrooloose/nerdcommenter'  "Easy commenting/uncommenting
 Plug 'scrooloose/nerdtree'       "File tree browser plugin
 Plug 'tpope/vim-surround'        "HTML Tag completion
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes' "Powerline with color schemes
 Plug 'schickling/vim-bufonly'
-Plug 'vimwiki/vimwiki'
-Plug 'vim-latex/vim-latex'
 
-" Languages and completion
-Plug 'dart-lang/dart-vim-plugin' "Dart
+" Search
+Plug 'rking/ag.vim'              "Silver Searcher plugin
+Plug 'kien/ctrlp.vim'            "Fuzzy file finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'lepture/vim-velocity'
-Plug 'chikamichi/mediawiki.vim'
 
+" Languages
+Plug 'dart-lang/dart-vim-plugin' "Dart
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-latex/vim-latex'
+Plug 'chikamichi/mediawiki.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-rails'
 
 " Git
 Plug 'airblade/vim-gitgutter'
