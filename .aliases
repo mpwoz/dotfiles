@@ -23,6 +23,9 @@ alias gci='git ci -m'
 alias gca='git ci --amend'
 alias gd='git diff'
 
+# Find all todos in a git repository authored by the current user.
+# Based on answers in here, but with better paren handling: https://stackoverflow.com/questions/25039242/how-to-list-all-my-todo-messages-in-the-current-git-managed-code-base
+alias todo-gitgrep='git grep -l TODO | xargs -n1 git blame -f -n -w | grep "$(git config user.name)" | grep TODO | sed "s/.\{9\}//" | sed "s/([^)]*)[[:space:]]*//"'
 
 # ag smart case search
 alias ag='ag -S'
