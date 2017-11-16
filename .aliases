@@ -36,3 +36,6 @@ unalias gp
 # Fix for rbenv install not showing output
 # https://github.com/rbenv/ruby-build/issues/1064
 alias rbi='RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" rbenv install --verbose'
+
+# Find all installed javas
+alias javahome='/usr/libexec/java_home -V'
