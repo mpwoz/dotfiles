@@ -51,6 +51,10 @@ touch ~/.zshrc-local
 ln -s ~/src/dotfiles/.i3 ~/.i3
 ln -s ~/src/dotfiles/gitignore_global ~/.gitignore_global
 
+# Set up scripts.
+# TODO: make this better when more scripts appear.
+ln -s ~/src/dotfiles/scripts/merge.sh ~/bin/merge.sh
+
 # Install cron jobs
 ~/src/dotfiles/cron/setup.sh
 
