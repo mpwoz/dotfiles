@@ -21,7 +21,9 @@ alias gs='git st'
 alias gl='git lg'
 alias gci='git ci -m'
 alias gca='git ci --amend'
+alias gco='git co'
 alias gd='git diff'
+alias ga='git add'
 
 # Find all todos in a git repository authored by the current user.
 # Based on answers in here, but with better paren handling: https://stackoverflow.com/questions/25039242/how-to-list-all-my-todo-messages-in-the-current-git-managed-code-base
@@ -31,7 +33,8 @@ alias todo-gitgrep='git grep -l TODO | xargs -n1 git blame -f -n -w | grep "$(gi
 alias ag='ag -S'
 
 # Don't accidentally push things (this is in zsh git plugin)
-unalias gp
+# also don't alert if the alias doesn't exist
+unalias gp &>/dev/null
 
 # Fix for rbenv install not showing output
 # https://github.com/rbenv/ruby-build/issues/1064
