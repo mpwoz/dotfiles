@@ -15,6 +15,10 @@ alias la='ls -A'
 alias l='ls -CF'
 alias sl=ls
 
+alias ts='tmux new -s'
+alias tls='tmux ls'
+alias ta='tmux attach'
+
 # Git shortcuts
 alias g='git'
 alias gs='git st'
