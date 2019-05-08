@@ -2,6 +2,10 @@
 # bootstrap: one liner to install git and clone this repo
 # setup: create symlinks, assume git and repo already present
 
+# Set ubuntu to write local time instead of the default UTC, to avoid messing up windows when dual booting
+# https://askubuntu.com/questions/800914/clock-shows-wrong-time-after-switching-from-ubuntu-to-windows-10
+timedatectl set-local-rtc 1
+
 # Make sure we're up to date
 apt-get -y update
 apt-get -y dist-upgrade
