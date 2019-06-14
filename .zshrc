@@ -1,8 +1,17 @@
+# Profiling code for speeding up zsh startup. don't forget the last line in this file.
+# Run this to time it:
+# time zsh -i -c exit
+#zmodload zsh/zprof
+
+### Performance optimizations
+mv ~/.zcompdump /tmp/ 2> /dev/null
+
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-source $(brew --prefix nvm)/nvm.sh
-
+## Disabled because it's slow.
+#source $(brew --prefix nvm)/nvm.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/mwwoznie/.oh-my-zsh
@@ -54,7 +63,8 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z globalias tmux rbenv)
+#plugins=(git z globalias tmux rbenv)
+plugins=(git globalias tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,4 +101,16 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zshrc-local
 
+# zsh completion
+SITE_FUNCTIONS=$(echo /usr/local/Cellar/env-improvement/*/share/zsh/site-functions | awk '{print $1}')
+fpath=($SITE_FUNCTIONS $fpath)
+autoload -U $SITE_FUNCTIONS/*(:t)
+
+
 source ~/.aliases
+
+
+
+
+# Profiling code for speeding up zsh startup. don't forget the last line in this file.
+#zprof
