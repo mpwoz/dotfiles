@@ -6,7 +6,6 @@
 ### Performance optimizations
 mv ~/.zcompdump /tmp/ 2> /dev/null
 
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -108,9 +107,6 @@ autoload -U $SITE_FUNCTIONS/*(:t)
 
 
 source ~/.aliases
-
-
-
 
 # Profiling code for speeding up zsh startup. don't forget the last line in this file.
 #zprof
