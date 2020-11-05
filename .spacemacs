@@ -122,7 +122,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 9
+                               :size 13
                                :weight normal
                                :width normal
                                :powerline-scale 0.9)
@@ -274,6 +274,7 @@ layers configuration. You are free to put any user code."
   (define-key global-map (kbd "C-=") 'text-scale-increase)
   (define-key global-map (kbd "C--") 'text-scale-decrease)
 
+
   ;; disable line numbers in org mode, since it slows it down
   (defun nolinum ()
     (global-linum-mode 0)
@@ -288,9 +289,13 @@ layers configuration. You are free to put any user code."
   (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
   ;; Don't add a timestamp when marking items as done
   (setq org-log-done nil)
-  (setq dart-enable-analysis-server t)
-  (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
-  (add-hook 'dart-mode-hook 'flycheck-mode)
+
+  ;; remove 'validate' link from org mode exported HTML files https://stackoverflow.com/questions/15134911/in-org-mode-how-do-i-remove-the-validate-xhtml-1-0-message-from-html-export/32761956
+  (setq org-html-validation-link nil)
+
+  ;; (setq dart-enable-analysis-server t)
+  ;; (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
+  ;; (add-hook 'dart-mode-hook 'flycheck-mode)
 
   ;; Clipboard integration
   (simpleclip-mode 1)

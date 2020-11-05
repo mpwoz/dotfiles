@@ -7,7 +7,8 @@
 mv ~/.zcompdump /tmp/ 2> /dev/null
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Homebrew (/usr/local/bin) comes before native (/usr/bin)
+export PATH=/usr/local/bin:$HOME/bin:$PATH
 
 ## Disabled because it's slow.
 #source $(brew --prefix nvm)/nvm.sh

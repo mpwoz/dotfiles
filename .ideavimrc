@@ -39,5 +39,9 @@ nnoremap <Space>j :action RecentFiles<CR>
 nnoremap <Space>k :action FileStructurePopup<CR>
 nnoremap <Space>h :action QuickJavaDoc<CR>
 
+" Uses the wrap to column plugin to make vim-wrapping work https://plugins.jetbrains.com/plugin/7234-wrap-to-column
+nmap gqq :action com.andrewbrookins.idea.wrap.WrapAction<CR>
+vmap gq :action com.andrewbrookins.idea.wrap.WrapAction<CR>
+
 set visualbell
 set noerrorbells
