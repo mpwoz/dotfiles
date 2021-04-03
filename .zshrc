@@ -14,7 +14,7 @@ export PATH=/usr/local/bin:$HOME/bin:$PATH
 #source $(brew --prefix nvm)/nvm.sh
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/mwwoznie/.oh-my-zsh
+export ZSH=/home/martin/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -100,13 +100,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.zshrc-local
-
-# zsh completion
-SITE_FUNCTIONS=$(echo /usr/local/Cellar/env-improvement/*/share/zsh/site-functions | awk '{print $1}')
-fpath=($SITE_FUNCTIONS $fpath)
-autoload -U $SITE_FUNCTIONS/*(:t)
-
-
+source ~/.zshenv
 source ~/.aliases
 
 # Profiling code for speeding up zsh startup. don't forget the last line in this file.
