@@ -14,6 +14,7 @@ export PATH=/usr/local/bin:$HOME/bin:$PATH
 #source $(brew --prefix nvm)/nvm.sh
 
 # Path to your oh-my-zsh installation.
+export ZSH_DISABLE_COMPFIX=true
 export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -99,8 +100,6 @@ source $ZSH/oh-my-zsh.sh
 #
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source ~/.zshrc-local
-source ~/.zshenv
 source ~/.aliases
 
 # Profiling code for speeding up zsh startup. don't forget the last line in this file.
