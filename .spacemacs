@@ -61,7 +61,17 @@ values."
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'. (default t)
-   dotspacemacs-delete-orphan-packages t))
+   dotspacemacs-delete-orphan-packages t
+
+   ;; Defines the behaviour of Spacemacs when installing packages.
+   ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
+   ;; `used-only' installs only explicitly used packages and deletes any unused
+   ;; packages as well as their unused dependencies. `used-but-keep-unused'
+   ;; installs only the used packages but won't delete unused ones. `all'
+   ;; installs *all* packages supported by Spacemacs and never uninstalls them.
+   ;; (default is `used-only')
+   dotspacemacs-install-packages 'used-only)
+)
 
 (defun dotspacemacs/init ()
   "Initialization function.
@@ -101,7 +111,8 @@ values."
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'.
    ;; (default '(recents projects))
-   dotspacemacs-startup-lists '(recents projects)
+   dotspacemacs-startup-lists '((recents . 5)
+                                (projects . 3))
    ;; Number of recent files to show in the startup buffer. Ignored if
    ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
    dotspacemacs-startup-recent-list-size 5
@@ -299,6 +310,7 @@ layers configuration. You are free to put any user code."
 
   ;; Clipboard integration
   (simpleclip-mode 1)
+  (org :variables org-want-todo-bindings t) ;; https://github.com/syl20bnr/spacemacs/issues/10495#issuecomment-374763113
 
   ;; vimrc syntax highlighting in emacs
   ;; Source: http://stackoverflow.com/a/4238738
