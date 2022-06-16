@@ -9,12 +9,22 @@
   dump = cat-file -p
   dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 
+  # e.g. run `git all status` to see status of all subdirectories with a git repo
+  all = "!f() { find . -type d -maxdepth 4 -name .git | xargs -I{} bash -c \"echo {} && git -C {}/../ $1\"; }; f"
+
+  # e.g. run `git pall pull` to quickly catch-up
+  pall = "!f() { find . -type d -maxdepth 4 -name .git | xargs -P10 -I{} bash -c \"git -C {}/../ $1\"; }; f"
+
+  # set all branches to master, pull all
+  resetall = "!f() { git all 'co master' && git pall pull; }; f"
+
 [color]
   ui = true
 
 [core]
   editor = vim
   excludesfile = ~/.gitignore
+	autocrlf = input
 
 [credential]
   helper = "cache --timeout=10800" #3h
@@ -48,5 +58,5 @@
   insteadOf = gist:
 
 [user]
-  name = Martin Wozniewicz
-  email = martin.woz@gmail.com
+	name = martin-wozniewicz
+	email = Martin.Wozniewicz@docusign.com
