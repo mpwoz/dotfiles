@@ -48,7 +48,7 @@
   enabled = true
 
 [web]
-  browser = google-chrome
+  browser = firefox
 
 # Common URLs, allows e.g. `git clone gh:mpwoz/dotfiles`
 [url "https://github.com/"]
@@ -58,5 +58,5 @@
   insteadOf = gist:
 
 [user]
-	name = martin-wozniewicz
-	email = Martin.Wozniewicz@docusign.com
+	name = mpwoz
+	email = martin.woz@gmail.com
