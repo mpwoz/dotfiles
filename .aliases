@@ -48,3 +48,6 @@ alias rbi='RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" r
 
 # Find all installed javas
 alias javahome='/usr/libexec/java_home -V'
+
+# ripgrep
+alias ag=rg
