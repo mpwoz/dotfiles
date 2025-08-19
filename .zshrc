@@ -107,3 +107,16 @@ source ~/.zshrc-local
 
 # Profiling code for speeding up zsh startup. don't forget the last line in this file.
 #zprof
+
+# speed up midnight commander startup time.
+alias mc='mc --nosubshell'
+
+
+# https://github.com/junegunn/fzf
+export FZF_DEFAULT_OPTS='--height 50% --layout=reverse '
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+
+
+# https://github.com/sharkdp/bat
+export BAT_STYLE=numbers,changes
+

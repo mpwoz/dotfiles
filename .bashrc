@@ -13,12 +13,12 @@ alias po="sudo poweroff"
 alias n="notify-send \"Job finished.\""
 
 # Use emacs
-alias emacs="emacs -nw"
-alias e="emacs"
+# alias emacs="emacs -nw"
+# alias e="emacs"
 
 #Turn off screensaver/power save
-xset s off
-xset -dpms
+# xset s off
+# xset -dpms
 
 # bash history
 # avoid duplicates in history
