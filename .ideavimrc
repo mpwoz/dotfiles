@@ -2,6 +2,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
+set surround
 
 nmap <C-b> <C-]>
 

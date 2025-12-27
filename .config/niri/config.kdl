@@ -7,7 +7,8 @@
 input {
     keyboard {
         xkb {
-            layout "us" // Use the German keyboard layout
+            layout "us"
+	    options "caps:super" // use capslock as super
         }
         numlock // Enable numlock on startup
 
@@ -21,7 +22,10 @@ input {
         natural-scroll // Enable natural (macOS-style) scrolling
     }
 
-    focus-follows-mouse // Automatically focus windows under the mouse pointer
+    // Automatically focus windows under the mouse pointer
+    // 0% makes it so we don't jump over to a window that's partially off-screen (to avoid jumpy animation)
+    focus-follows-mouse max-scroll-amount="0%"
+
     workspace-auto-back-and-forth // Enable workspace back & forth switching
 }
 
@@ -30,8 +34,8 @@ input {
 // You will have to remove "/-" and edit it before it takes effect.
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 
-/- output "DP-1" {
-    mode "2560x1440@359.979" // Set resolution and refresh rate
+output "DP-3" {
+    mode "2560x1440@119.998" // Set resolution and refresh rate
     scale 1 // No scaling (use 2 for HiDPI)
 }
 
@@ -43,7 +47,8 @@ binds {
 
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
-    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
+    // MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
+    MOD+SPACE                           hotkey-overlay-title="Open App Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
     
@@ -148,11 +153,14 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
-    spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
-    spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
-    spawn-sh-at-startup "waybar" // Launch waybar
+    //spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
+    //spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
+    //spawn-sh-at-startup "waybar" // Launch waybar
 
-    spawn-at-startup "noctalia-shell"
+    spawn-at-startup "qs" "-c" "noctalia-shell"
+
+    // blue light blocker / nightlight https://psi4j.github.io/sunsetr/presets/examples.html
+    spawn-at-startup "sunsetr"
 
     prefer-no-csd // Disable program decorations
     screenshot-path null // Disable screenshot saving
@@ -161,7 +169,7 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 
     layout {
-        gaps 9 // Gap between windows
+        gaps 5 // Gap between windows
         center-focused-column "never" // Don’t auto-center focused column
 
         preset-column-widths {
@@ -231,7 +239,7 @@ binds {
     }
 
     window-rule {
-        geometry-corner-radius 5 // Set every window radius
+        geometry-corner-radius 10 // Set every window radius
         clip-to-geometry true
     }
 
@@ -248,5 +256,5 @@ binds {
     }
 
     hotkey-overlay {
-        // skip-at-startup
+        skip-at-startup
     }
