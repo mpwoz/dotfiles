@@ -17,6 +17,11 @@ input {
 	repeat-rate 35
     }
 
+    mouse {
+        accel-speed -0.2 // 1.0 to 1.0, sensitivity
+	accel-profile "flat"
+    }
+
     touchpad {
         tap // Enable tap-to-click
         natural-scroll // Enable natural (macOS-style) scrolling
@@ -153,8 +158,8 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
-    //spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
-    //spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
+    spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
+    spawn-sh-at-startup "swww img /home/martin/Pictures/Wallpapers/wallpaper.png" // Set wallpaper
     //spawn-sh-at-startup "waybar" // Launch waybar
 
     spawn-at-startup "qs" "-c" "noctalia-shell"
