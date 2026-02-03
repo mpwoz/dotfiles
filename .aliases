@@ -35,9 +35,6 @@ alias ga='git add'
 # Based on answers in here, but with better paren handling: https://stackoverflow.com/questions/25039242/how-to-list-all-my-todo-messages-in-the-current-git-managed-code-base
 alias todo-gitgrep='git grep -l TODO | xargs -n1 git blame -f -n -w | grep "$(git config user.name)" | grep TODO | sed "s/.\{9\}//" | sed "s/([^)]*)[[:space:]]*//"'
 
-# ag smart case search
-alias ag='ag -S'
-
 # Don't accidentally push things (this is in zsh git plugin)
 # also don't alert if the alias doesn't exist
 unalias gp &>/dev/null
@@ -47,7 +44,7 @@ unalias gp &>/dev/null
 alias rbi='RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" rbenv install --verbose'
 
 # Find all installed javas
-alias javahome='/usr/libexec/java_home -V'
+#alias javahome='/usr/libexec/java_home -V'
 
 # ripgrep
 alias ag=rg
