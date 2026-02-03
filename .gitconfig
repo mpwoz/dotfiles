@@ -1,62 +1,11 @@
-[alias]
-  co = checkout
-  ci = commit
-  br = branch
-  st = status
-  lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %<(80,trunc)%s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=short
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date=short
-  type = cat-file -t
-  dump = cat-file -p
-  dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
-
-  # e.g. run `git all status` to see status of all subdirectories with a git repo
-  all = "!f() { find . -type d -maxdepth 4 -name .git | xargs -I{} bash -c \"echo {} && git -C {}/../ $1\"; }; f"
-
-  # e.g. run `git pall pull` to quickly catch-up
-  pall = "!f() { find . -type d -maxdepth 4 -name .git | xargs -P10 -I{} bash -c \"git -C {}/../ $1\"; }; f"
-
-  # set all branches to master, pull all
-  resetall = "!f() { git all 'co master' && git pall pull; }; f"
-
-[color]
-  ui = true
-
-[core]
-  editor = vim
-  excludesfile = ~/.gitignore
-	autocrlf = input
-
-[credential]
-  helper = "cache --timeout=10800" #3h
-
-[diff]
-  tool = vimdiff
-
-[log]
-  date = relative
-
-[merge]
-  tool = vimdiff
-
-[pull]
-  rebase = true
-
-[push]
-  default = matching
-
-[rerere]
-  enabled = true
-
-[web]
-  browser = firefox
-
-# Common URLs, allows e.g. `git clone gh:mpwoz/dotfiles`
-[url "https://github.com/"]
-  insteadOf = gh:
-
-[url "https://gist.github.com/"]
-  insteadOf = gist:
-
 [user]
-	name = mpwoz
 	email = martin.woz@gmail.com
+	name = Martin Wozniewicz
+[credential]
+	helper = store
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  st = status

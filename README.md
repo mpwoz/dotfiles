@@ -1,12 +1,8 @@
-## Collection of .files
+# Fix clock on dual-booted systems
+Set linux to write local time instead of the default UTC, to avoid messing up windows when dual booting.
+https://askubuntu.com/questions/800914/clock-shows-wrong-time-after-switching-from-ubuntu-to-windows-10
 
-### Installation (warning: installs chrome, git, and a bunch of other stuff)
+```
+timedatectl set-local-rtc 1
+```
 
-    wget -P ~/tmp/ https://raw.githubusercontent.com/mpwoz/dotfiles/master/setup.sh \
-      && sudo /tmp/setup.sh
-
-#### Vim
-After deploying, run `:PlugInstall` inside vim to install bundles. 
-
-#### Misc
-xorg.conf goes in /etc/X11/ to enable QNIX monitor working with nvidia drivers properly
