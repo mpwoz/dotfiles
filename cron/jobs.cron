@@ -1,2 +1,0 @@
-*/20 * * * * ~/src/dotfiles/cron/take-break.sh
-*/30 09-18 * * 1-5 ~/src/dotfiles/cron/journal.sh
