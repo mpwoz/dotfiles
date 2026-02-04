@@ -56,7 +56,7 @@ binds {
     MOD+SPACE                           hotkey-overlay-title="Open App Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
-    
+
     // Please choose your own file manager
     MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
 
@@ -158,8 +158,8 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
-    spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
-    spawn-sh-at-startup "swww img /home/martin/Pictures/Wallpapers/wallpaper.png" // Set wallpaper
+    // spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
+    // spawn-sh-at-startup "swww img /home/martin/Pictures/Wallpapers/wallpaper.png" // Set wallpaper
     //spawn-sh-at-startup "waybar" // Launch waybar
 
     spawn-at-startup "qs" "-c" "noctalia-shell"
