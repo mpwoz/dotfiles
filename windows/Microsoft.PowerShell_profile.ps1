@@ -13,5 +13,8 @@ function gc { param($m) git commit -m $m }
 function gp { git push }
 function gpl { git pull }
 
+# vim
+function vim { nvim }
+
 # Reload with:
 # . $PROFILE

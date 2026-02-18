@@ -9,8 +9,15 @@ program = "pwsh.exe"
 [general]
 working_directory = "C:\\ws"
 
+[font]
+normal = { family = "FiraCode Nerd Font Mono" }
+size = 11.0
+
 # Ctrl + Shift + N to open a new window
 [[keyboard.bindings]]
 key = "N"
 mods = "Control|Shift"
 action = "SpawnNewInstance"
+
+[window]
+decorations = "buttonless"
