@@ -1,0 +1,16 @@
+# windows alacritty setup
+# goes in %APPDATA%\alacritty\alacritty.toml
+# requires powershell 6+, install with `winget install Microsoft.PowerShell`
+# symlink requires developer mode
+
+[terminal.shell]
+program = "pwsh.exe"
+
+[general]
+working_directory = "C:\\ws"
+
+# Ctrl + Shift + N to open a new window
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
